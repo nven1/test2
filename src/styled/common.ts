@@ -12,3 +12,14 @@ export const Button1 = styled.button`
     opacity: 0.8;
   }
 `;
+
+export const Loading = styled.div`
+  background-color: ${props => props.theme.orange};
+  display: flex;
+  place-content: center;
+  place-items: center;
+  font-weight: bold;
+  font-size: 3em;
+  height: 100vh;
+  color: ${props => props.theme.grey1};
+`;

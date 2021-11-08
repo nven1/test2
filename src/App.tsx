@@ -8,6 +8,7 @@ import HomeContainer from "./components/HomeContainer/HomeContainer";
 import Login from "./components/LoginContainer/LoginContainer";
 import MainApp from "./components/MainApp/MainApp";
 import { selectAuth } from "./reducers/AuthReducer";
+import { Loading } from "./styled/common";
 import { checkAuthState, initGapi } from "./utils/authHelpers";
 
 function App() {
@@ -28,7 +29,7 @@ function App() {
   const renderContent = () => {
     switch (auth) {
       case null:
-        return <div>Loading</div>;
+        return <Loading>Loading</Loading>;
       case true:
         return <MainApp />;
       case false:
